@@ -61,3 +61,4 @@ from cadmus.post_retrieval.clean_up_dir import clean_up_dir
 from cadmus.pre_retrieval.add_mesh_remove_preprint import add_mesh_remove_preprint
 from cadmus.pre_retrieval.change_output_structure import change_output_structure
 from cadmus.post_retrieval.parsed_to_df import parsed_to_df
+from cadmus.retrieval.edirect import pipeline
