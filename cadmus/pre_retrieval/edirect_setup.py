@@ -1,13 +1,13 @@
 # This script is to set up edirect program on your computer
 # We use edirect to avoid the 10000 document limit now imposed on the NCBI API. 
 # This can all be found at https://www.ncbi.nlm.nih.gov/books/NBK179288/
-def edirect_setup(ncbi_api_key)
+def edirect_setup(ncbi_api_key):
   print('Checking for Edirect installation')
   # check if edirect is already installed
   check = ! esearch
   # you get a missing database parameter error if its already installed
   if check == [' ERROR:  Missing -db argument']:
-    print('Edirect already installed)
+    print('Edirect already installed')
     pass
   else:
     # download the edirect package and say yes at the prompt
