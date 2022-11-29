@@ -18,8 +18,7 @@ import subprocess
 os.environ['TIKA_SERVER_JAR'] = 'https://repo1.maven.org/maven2/org/apache/tika/tika-server/'+tika.__version__+'/tika-server-'+tika.__version__+'.jar'
 from tika import parser
 
-from cadmus.retrieval.search_terms_to_pmid_list import search_terms_to_pmid_list
-from cadmus.pre_retrieval.pmids_to_medline_file import pmids_to_medline_file
+from cadmus.retrieval.search_terms_to_medline import search_terms_to_medline
 from cadmus.pre_retrieval.creation_retrieved_df import creation_retrieved_df
 from cadmus.pre_retrieval.ncbi_id_converter_batch import ncbi_id_converter_batch
 from cadmus.retrieval.HTTP_setup import HTTP_setup
