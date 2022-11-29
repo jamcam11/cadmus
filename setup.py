@@ -26,10 +26,6 @@ setuptools.setup(
 'lxml',
 'IPython',
 'fuzzywuzzy',
-'os-sys',
-'shutil',
-'subprocess',
-'shlex',
 ],
     python_requires='>=3.6'
 )
