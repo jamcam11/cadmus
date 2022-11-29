@@ -13,6 +13,7 @@ import pandas as pd
 import tika
 import wget
 from dateutil import parser
+import subprocess
 
 os.environ['TIKA_SERVER_JAR'] = 'https://repo1.maven.org/maven2/org/apache/tika/tika-server/'+tika.__version__+'/tika-server-'+tika.__version__+'.jar'
 from tika import parser
@@ -33,13 +34,12 @@ from cadmus.post_retrieval.correct_date_format import correct_date_format
 from cadmus.post_retrieval.clean_up_dir import clean_up_dir
 from cadmus.pre_retrieval.add_mesh_remove_preprint import add_mesh_remove_preprint
 from cadmus.pre_retrieval.change_output_structure import change_output_structure
-from cadmus.pre_retrieval.edirect_setup import edirect_setup
 from cadmus.retrieval.search_terms_to_medline import search_terms_to_medline
 
 def bioscraping(input_function, email, api_key, click_through_api_key, start = None, idx = None , full_search = None, keep_abstract = True):
     
     # check for the Edirect programme and install it if not already present
-    edirect_setup(api_key)
+    subprocess.call(["./cadmus/pre_retrieval/edirect_setup.sh", api_key])
     
     # first bioscraping checks whether this is an update of a previous search or a new search.
     # create all the output directories if they do not already exist
