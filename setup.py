@@ -26,7 +26,7 @@ setuptools.setup(
 'lxml',
 'IPython',
 'fuzzywuzzy',
-'sys',
+'os-sys',
 'shutil',
 'subprocess',
 'shlex',
