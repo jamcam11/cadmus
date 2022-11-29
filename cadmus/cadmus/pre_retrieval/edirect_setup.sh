@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # this script aims to set up edirect for use in cadmus
-
 # first check if edirect is present in the home directory 
 echo checking if edirect is already installed
 check=$(ls ~/ | grep -c edirect)
