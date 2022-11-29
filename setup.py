@@ -25,7 +25,11 @@ setuptools.setup(
 'python-dateutil',
 'lxml',
 'IPython',
-'fuzzywuzzy'
+'fuzzywuzzy',
+'sys'
+'shutil'
+'subprocess'
+'shlex'
 ],
     python_requires='>=3.6'
 )
